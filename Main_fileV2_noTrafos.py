@@ -38,11 +38,11 @@ pp.create_bus(net, name='Bus 8', vn_kv = V_HV,  geodata=(100,-100))
 
 ### Generator Definition ###
 
-pp.create_gen(net, 6, name='Hydro ST', p_mw=P_ST, vm_pu=1.03)
-pp.create_gen(net, 8, name='Wind', p_mw=P_Wind, vm_pu=1.02)
-pp.create_gen(net, 2, name='Nuclear', p_mw=P_Nuc, vm_pu=1.02)
-pp.create_gen(net, 3, name='Hydro RoR', p_mw=P_RoR, vm_pu=1.01)
-pp.create_gen(net, 5, name='PV', p_mw=P_FV, vm_pu=1.03)
+pp.create_gen(net, 6, name='Hydro ST', p_mw=P_ST, vm_pu=1)
+pp.create_gen(net, 8, name='Wind', p_mw=P_Wind, vm_pu=1)
+pp.create_gen(net, 2, name='Nuclear', p_mw=P_Nuc, vm_pu=1)
+pp.create_gen(net, 3, name='Hydro RoR', p_mw=P_RoR, vm_pu=1)
+pp.create_gen(net, 5, name='PV', p_mw=P_FV, vm_pu=1)
 
 
 pp.create_ext_grid(net, 0, name = 'Gas')  #Slack bus will be bus 10 (gas)
@@ -90,6 +90,8 @@ pp.create_line_from_parameters(net, from_bus = 4, to_bus = 5, length_km = 140, r
 pp.create_line_from_parameters(net, from_bus = 7, to_bus = 8, length_km = 100, r_ohm_per_km = 0.01155, x_ohm_per_km = 0.178402754, c_nf_per_km = 20.39932257 , max_i_ka = 2.326, name='L7')
 
 pp.create_line_from_parameters(net, from_bus = 7, to_bus = 6, length_km = 100, r_ohm_per_km = 0.0231, x_ohm_per_km = 0.395412005, c_nf_per_km = 9.165699678 , max_i_ka = 1.163, name='L8')
+
+pp.create_line_from_parameters(net, from_bus = 5, to_bus = 6, length_km = 140, r_ohm_per_km = 0.00385, x_ohm_per_km = 0.249302164, c_nf_per_km = 13.66843238 , max_i_ka = 6.978, name='L6')
 
 #pp.runpp(net,max_iteration=20)
 
