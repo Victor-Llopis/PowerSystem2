@@ -87,7 +87,7 @@ def grid_iteration(i):
         return Q
     
     
-    pp.create_load(net, 1, name = 'Load_1', p_mw=demand*0.4, q_mvar=get_reactive(demand*0.4, PF))
+    pp.create_load(net, 1, name = 'Load_1', p_mw=demand*0.4, q_mvar=get_reactive(demand*0.4, 1))
     pp.create_load(net, 7, name = 'Load_2', p_mw=demand*0.4, q_mvar=get_reactive(demand*0.4, PF))
     pp.create_load(net, 4, name = 'Load_3', p_mw=demand*0.2, q_mvar=get_reactive(demand*0.2, PF))
     pp.create_load(net, 6, name = 'Hydro_Charge', p_mw=P_STC, q_mvar=get_reactive(P_STC, PF))
@@ -102,13 +102,13 @@ def grid_iteration(i):
     #Lines
     
     
-    pp.create_line_from_parameters(net, from_bus = 0, to_bus = 1, length_km = 100, r_ohm_per_km = 0.005775, x_ohm_per_km = 0.240949, c_nf_per_km = 14.709559 , max_i_ka = 4.652, name='L1') 
+    pp.create_line_from_parameters(net, from_bus = 0, to_bus = 1, length_km = 100, r_ohm_per_km = 0.00385, x_ohm_per_km = 0.213079, c_nf_per_km = 16.570796 , max_i_ka = 6.978, name='L1') 
     
     pp.create_line_from_parameters(net, from_bus = 1, to_bus = 2, length_km = 140, r_ohm_per_km = 0.01155, x_ohm_per_km = 0.172456, c_nf_per_km = 21.133759, max_i_ka = 2.326, name='L2')
     
     pp.create_line_from_parameters(net, from_bus = 1, to_bus = 7, length_km = 100, r_ohm_per_km = 0.00645, x_ohm_per_km = 0.241807, c_nf_per_km = 14.656532, max_i_ka = 4.384, name='L3')
     
-    pp.create_line_from_parameters(net, from_bus = 1, to_bus = 3, length_km = 200, r_ohm_per_km = 0.018075, x_ohm_per_km = 0.24898, c_nf_per_km = 14.209873 , max_i_ka = 2.440, name='L4')
+    pp.create_line_from_parameters(net, from_bus = 1, to_bus = 3, length_km = 200, r_ohm_per_km = 0.01155, x_ohm_per_km = 0.172456, c_nf_per_km = 21.133759, max_i_ka = 2.326, name='L4')
     
     pp.create_line_from_parameters(net, from_bus = 3, to_bus = 4, length_km = 140, r_ohm_per_km = 0.01445, x_ohm_per_km = 0.247238, c_nf_per_km = 14.311345 , max_i_ka = 2.788, name='L5')
     
@@ -118,11 +118,11 @@ def grid_iteration(i):
     
     pp.create_line_from_parameters(net, from_bus = 7, to_bus = 6, length_km = 100, r_ohm_per_km = 0.00905, x_ohm_per_km = 0.243549, c_nf_per_km = 14.532293 , max_i_ka = 3.664, name='L8')
     
-    pp.create_line_from_parameters(net, from_bus = 5, to_bus = 6, length_km = 140, r_ohm_per_km = 0.00645, x_ohm_per_km = 0.241807, c_nf_per_km = 14.656532 , max_i_ka = 4.384, name='L9')
+    pp.create_line_from_parameters(net, from_bus = 5, to_bus = 6, length_km = 140, r_ohm_per_km = 0.00385, x_ohm_per_km = 0.213079, c_nf_per_km = 16.570796 , max_i_ka = 6.978, name='L9')
     
     pp.create_line_from_parameters(net, from_bus = 0, to_bus = 3, length_km = 223.61, r_ohm_per_km = 0.00905, x_ohm_per_km = 0.243549, c_nf_per_km = 14.532293 , max_i_ka = 3.664, name='L10')
     
-    pp.create_line_from_parameters(net, from_bus = 6, to_bus = 1, length_km = 140, r_ohm_per_km = 0.01445, x_ohm_per_km = 0.247238, c_nf_per_km = 14.311345 , max_i_ka = 2.788, name='L11')
+    pp.create_line_from_parameters(net, from_bus = 6, to_bus = 1, length_km = 140, r_ohm_per_km = 0.022925, x_ohm_per_km = 0.250594, c_nf_per_km = 14.114887 , max_i_ka = 2.120, name='L11')
     
     #pp.runpp(net,max_iteration=20)
     

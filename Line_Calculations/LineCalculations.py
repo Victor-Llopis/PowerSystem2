@@ -2,6 +2,17 @@ from math import sqrt, pi , log, sin
 
 
 def LineCalc(A_coord,B_coord,C_coord,radius,Rac, bundled=False,f= 50, kg = 0.779,dBundle = 0,nBundle=1):
+    
+    ''' 
+    A,B,C coords in format [[x,y]]
+    radius: in meters, radius of the conductor
+    Rac: Resistance of the conductor in Ohm/km
+    f: frequency of the grid
+    kg: Coefficient of the conductor
+    dBubnle: Distance between conductors
+    nBundle: Number of conductors in the bundle
+    
+    '''  
 
     if bundled:
         pass
@@ -31,12 +42,12 @@ def LineCalc(A_coord,B_coord,C_coord,radius,Rac, bundled=False,f= 50, kg = 0.779
 
     GMD = (GMDab*GMDbc*GMDac)**(1/3)
 
-    '''
+    
     print('GMD: ',GMD)
     print('GMDab: ',GMDab)
     print('GMDac: ',GMDac)
     print('GMDbc: ',GMDbc)
-    '''
+    
 
 
     # GMR
