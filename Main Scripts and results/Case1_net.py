@@ -108,7 +108,7 @@ def grid_iteration(i):
     
     pp.create_line_from_parameters(net, from_bus = 1, to_bus = 7, length_km = 100, r_ohm_per_km = 0.00645, x_ohm_per_km = 0.241807, c_nf_per_km = 14.656532, max_i_ka = 4.384, name='L3')
     
-    pp.create_line_from_parameters(net, from_bus = 1, to_bus = 3, length_km = 200, r_ohm_per_km = 0.01155, x_ohm_per_km = 0.172456, c_nf_per_km = 21.133759, max_i_ka = 2.326, name='L4')
+    pp.create_line_from_parameters(net, from_bus = 1, to_bus = 3, length_km = 200, r_ohm_per_km = 0.0181, x_ohm_per_km = 0.177657, c_nf_per_km = 20.438086, max_i_ka = 1.832, name='L4')
     
     pp.create_line_from_parameters(net, from_bus = 3, to_bus = 4, length_km = 140, r_ohm_per_km = 0.01445, x_ohm_per_km = 0.247238, c_nf_per_km = 14.311345 , max_i_ka = 2.788, name='L5')
     
